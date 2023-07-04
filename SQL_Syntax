@@ -1,0 +1,18 @@
+CREATE DATABASE BooksDB;
+USE BooksDB;
+CREATE TABLE Books (
+    Title VARCHAR(50),
+    Author VARCHAR(50),
+    Genre VARCHAR(50),
+    Publication_year INT,
+    Price DECIMAL(10,2)
+);
+INSERT INTO Books VALUES ('The Epic', 'Odin', 'Fiction', 1988, 1009.99);
+INSERT INTO Books VALUES ('The Iron Man', 'Stanley', 'Fiction', 1999, 770.99);
+INSERT INTO Books VALUES ('The superMan', 'WC Comics', 'Fiction', 1978, 800.99);
+INSERT INTO Books VALUES ('Galaxy', 'Jane', 'Fantasy', 1993, 999.99);
+INSERT INTO Books VALUES ('Intestellar', 'James Camreoon', 'Fiction', 2014, 5999.99);
+SELECT * FROM Books;
+SELECT * FROM Books WHERE title = 'The Epic';
+UPDATE Books SET price = 2000.99 WHERE title = 'The Epic';
+DELETE FROM Books WHERE title = 'Galaxy';
